@@ -1,6 +1,4 @@
-import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
 
 public class PSDA01_L0124100_GibranMaulana_1 {
 
@@ -29,12 +27,6 @@ public class PSDA01_L0124100_GibranMaulana_1 {
                 }
                 current.next = new Node<T>(data);
 
-            }
-        }
-
-        public void addAllData(Collection<? extends T> listData) {
-            for(T data : listData) {
-                add(data);
             }
         }
 
@@ -131,7 +123,13 @@ public class PSDA01_L0124100_GibranMaulana_1 {
         System.out.println("==================");
         System.out.println("IMPLEMENTASI MENGGUNAKAN LIBRARY LINKED LIST");
 
-        LinkedList<String> buahBuahanLinkList = new LinkedList<>(List.of("Rambutan", "Jambu", "Jeruk", "Melon", "Semangka", "Durian"));
+        LinkedList<String> buahBuahanLinkList = new LinkedList<>();
+        buahBuahanLinkList.add("Rambutan");
+        buahBuahanLinkList.add("Jambu");
+        buahBuahanLinkList.add("Jeruk");
+        buahBuahanLinkList.add("Melon");
+        buahBuahanLinkList.add("Semangka");
+        buahBuahanLinkList.add("Durian");
 
         LinkedList<String> buahLinkList1 = new LinkedList<>();
         LinkedList<String> buahLinkList2 = new LinkedList<>();
@@ -174,7 +172,12 @@ public class PSDA01_L0124100_GibranMaulana_1 {
         System.out.println("IMPLEMENTASI MENGGUNAKAN LINKED LIST MANUAL");
 
         customLinkedList<String> buahBuahanManualLinkedList = new customLinkedList<>();
-        buahBuahanManualLinkedList.addAllData(List.of("Rambutan", "Jambu", "Jeruk", "Melon", "Semangka", "Durian"));
+        buahBuahanManualLinkedList.add("Rambutan");
+        buahBuahanManualLinkedList.add("Jambu");
+        buahBuahanManualLinkedList.add("Jeruk");
+        buahBuahanManualLinkedList.add("Melon");
+        buahBuahanManualLinkedList.add("Semangka");
+        buahBuahanManualLinkedList.add("Durian");
 
         customLinkedList<String> buahManualLinkedList1 = buahBuahanManualLinkedList.slice(0, 3);
         customLinkedList<String> buahManualLinkedList2 = buahBuahanManualLinkedList.slice(3, 6);

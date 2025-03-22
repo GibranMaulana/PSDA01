@@ -96,67 +96,6 @@ public class PSDA01_L0124100_GibranMaulana_2 {
             return top == null;
         }
 
-        public void sortAlphabetically() {
-            top = quickSort(top);
-        }
-
-        private Node<T> quickSort(Node<T> head) {
-
-            if (head == null || head.next == null) {
-                return head;
-            }
-
-            Node<T> pivot = head;
-            String pivotValue = pivot.data.toString();
-
-            Node<T> current = head.next;
-            pivot.next = null;
-
-            Node<T> left = null, leftTail = null;
-            Node<T> right = null, rightTail = null;
-
-            while (current != null) {
-                Node<T> next = current.next;
-                current.next = null;
-                if (current.data.toString().compareTo(pivotValue) < 0) {
-
-                    if (left == null) {
-                        left = current;
-                        leftTail = current;
-                    } else {
-                        leftTail.next = current;
-                        leftTail = current;
-                    }
-                } else {
-
-                    if (right == null) {
-                        right = current;
-                        rightTail = current;
-                    } else {
-                        rightTail.next = current;
-                        rightTail = current;
-                    }
-                }
-                current = next;
-            }
-
-            left = quickSort(left);
-            right = quickSort(right);
-
-            if (left == null) {
-                pivot.next = right;
-                return pivot;
-            } else {
-                Node<T> temp = left;
-                while (temp.next != null) {
-                    temp = temp.next;
-                }
-                temp.next = pivot;
-                pivot.next = right;
-                return left;
-            }
-        }
-
         public void print() {
             Node<T> current = top;
             while(current != null) {
