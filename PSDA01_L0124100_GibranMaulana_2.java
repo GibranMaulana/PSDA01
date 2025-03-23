@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class PSDA01_L0124100_GibranMaulana_2 {
 
     public static class Stack<T> {

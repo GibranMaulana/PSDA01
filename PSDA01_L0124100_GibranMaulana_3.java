@@ -73,8 +73,6 @@ public class PSDA01_L0124100_GibranMaulana_3 {
                 current = current.next;
             }
         }
-
-
     }
 
     public static class Stack<T> {
